@@ -1,0 +1,11 @@
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+
+  <repository>mvn:org.apache.camel.karaf/apache-camel/${camel-version}/xml/features</repository>
+
+  <feature name="fabric8-web-project" version="${project.version}" resolver="(obr)">
+    <feature>war</feature>
+    <bundle>mvn:org.fabric8.demo/fabric8-web-demo/${project.version}/war</bundle>
+  </feature>
+  
+
+</features>
