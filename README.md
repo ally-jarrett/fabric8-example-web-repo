@@ -6,10 +6,9 @@ Fabric8 (JBoss Fuse) Web App Example:
 This project provides an example of how to deploy a simple web application with Bootstrap to Fabric8 / JBoss Fuse. 
 More advanced examples to come.  
 
-Deployment: 
+#Deployment: 
 
-First build the project, navigate to the projects root dir and execute from the cli:
-# mvn clean install
+First build the project, navigate to the projects root dir and execute from the cli: #mvn clean install
 
 Add the Features repo to Fabric Profile:
 
