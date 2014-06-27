@@ -14,13 +14,15 @@ Add the Features repo to Fabric Profile:
 
 If you're running a default container then the profile applied is fabric as specified in the command below, however I would recommed creating your own fabric profile. 
 Via CLI:
+
 1. # profile-edit --repositories mvn:org.fabric8.demo/fabric8-web-features/1.0.0-SNAPSHOT/xml/features fabric
-2. # profile-edit --features fabric8-web-project fabric
-3. # list | grep 'Fabric8 Basic Web Demo' 
-If successfully deployed you should see something like: [ 146] [Active     ] [            ] [   60] Fabric8 Basic Web Demo ()
-4. Open a new browser tab and navigate to: http://localhost:8181/fabric8-web-demo
+2. # profile-edit --features fabric8-web-project fabric 
+3. # list | grep 'Fabric8 Basic Web Demo'  
+If successfully deployed you should see something like: [ 146] [Active     ] [            ] [   60] Fabric8 Basic Web Demo()
+4. # Open a new browser tab and navigate to: http://localhost:8181/fabric8-web-demo
 
 Via Hawtio: (default setup)
+
 1. Login (default is admin/admin)
 2. Click on Runtime
 3. Under Container sub tab click on 'root'
