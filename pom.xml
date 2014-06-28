@@ -99,5 +99,6 @@
 	<modules>
 		<module>fabric8-web-features</module>
 		<module>fabric8-web-demo</module>
+		<module>fabric8-web-angular</module>
 	</modules>
 </project>

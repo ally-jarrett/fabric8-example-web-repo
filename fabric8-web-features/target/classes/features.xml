@@ -7,5 +7,9 @@
     <bundle>mvn:org.fabric8.demo/fabric8-web-demo/1.0.0-SNAPSHOT/war</bundle>
   </feature>
   
+  <feature name="fabric8-angular-project" version="1.0.0-SNAPSHOT" resolver="(obr)">
+    <feature>war</feature>
+    <bundle>mvn:org.fabric8.demo/fabric8-web-angular/1.0.0-SNAPSHOT/war</bundle>
+  </feature>
 
 </features>

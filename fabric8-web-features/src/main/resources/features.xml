@@ -7,5 +7,9 @@
     <bundle>mvn:org.fabric8.demo/fabric8-web-demo/${project.version}/war</bundle>
   </feature>
   
+  <feature name="fabric8-angular-project" version="${project.version}" resolver="(obr)">
+    <feature>war</feature>
+    <bundle>mvn:org.fabric8.demo/fabric8-web-angular/${project.version}/war</bundle>
+  </feature>
 
 </features>
