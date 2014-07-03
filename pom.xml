@@ -187,6 +187,5 @@
 		<module>fabric8-web-demo</module>
 		<module>fabric8-web-angular</module>	
 		<module>fabric8-angular-spring</module>
-		<module>fabric8-camel-jms-transactions</module>
 	</modules>
 </project>

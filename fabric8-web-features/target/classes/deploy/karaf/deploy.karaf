@@ -1,4 +1,4 @@
-# Create Fabric Child Containers
+# Create Fabric Child Containers, for now we only create 1 added the second for a master/slave topology
 fabric:container-create-child root MQ-01
 #fabric:container-create-child root MQ-02
 fabric:container-create-child root Services-01
@@ -22,7 +22,6 @@ profile-edit --repositories mvn:org.fabric8.demo/fabric8-web-features/1.0.0-SNAP
 
 # Add our basic web demo to the Services Child profile
 profile-edit --features fabric8-angular-project fabric8-demo-services
-#profile-edit --features fabric8-jms-transactions fabric8-demo-services
 
 # Apple Services Profiles to the Services Container
 fabric:container-add-profile Services-01 fabric8-demo-services
