@@ -1,0 +1,28 @@
+# Create Fabric Child Containers, for now we only create 1 added the second for a master/slave topology
+fabric:container-create-child root MQ-01
+#fabric:container-create-child root MQ-02
+fabric:container-create-child root Services-01
+
+# Create new basic, test AMQ Profile with mq-base as a parent
+mq-create --ports openwire=61616 --group fabric8-amq mq-fabric8-demo
+
+# Add zookeeper commands to our fabric
+fabric:profile-edit --features fabric-zookeeper-commands default
+
+# Create Services container profiles 
+fabric:profile-create --parents jboss-fuse-minimal --parents mq-client-fabric8-amq --parents mq-client fabric8-demo-parent
+fabric:profile-create --parents fabric8-demo-parent fabric8-demo-services
+
+# Apply AMQ Test Profile to MQ Child Continer
+fabric:container-change-profile MQ-01 mq-broker-fabric8-amq.mq-fabric8-demo
+#fabric:container-change-profile MQ-02 mq-broker-fabric8-amq.mq-fabric8-demo
+
+# Add features file to our parent profile
+profile-edit --repositories mvn:org.fabric8.demo/fabric8-web-features/1.0.0-SNAPSHOT/xml/features fabric8-demo-parent
+
+# Add our basic web demo to the Services Child profile
+profile-edit --features fabric8-angular-project fabric8-demo-services
+
+# Apple Services Profiles to the Services Container
+fabric:container-add-profile Services-01 fabric8-demo-services
+
