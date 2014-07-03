@@ -1,7 +1,10 @@
-fabric8-example-repo
+fabric8-example-web-repo
 ====================
 
+Fabric8 based Web App examples 
+
 Fabric8 (JBoss Fuse) Web App Example:
+====================
 
 This project provides an example of how to deploy a simple web application with Bootstrap to Fabric8 / JBoss Fuse. 
 The AngularJS demo is a simple implementation of the Web-Demo with the Angular Libraries and some simple UI-Routing implemented. 
